@@ -216,7 +216,7 @@ const HeroSection = () => {
           />
         </div>
         <h1 className="text-4xl md:text-6xl font-extrabold bg-clip-text text-transparent bg-gradient-to-b from-gray-900 to-gray-600 dark:from-gray-50 dark:to-gray-400 pb-4">
-          Cybersecurity Engineer & Python Developer
+          Cybersecurity Engineer & Programmer
         </h1>
         <p className="mt-4 text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
           Building secure systems and analyzing digital threats. Specializing in threat detection, automation, and secure backend development.
