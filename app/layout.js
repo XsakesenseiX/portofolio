@@ -20,9 +20,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="!scroll-smooth">
       <head>
-        {/* This tag is essential for responsive design */}
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
+      {/* This line uses the 'inter' variable, which is now correctly defined. */}
       <body className={inter.className}>{children}</body>
     </html>
   )
