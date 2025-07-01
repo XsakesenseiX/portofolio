@@ -208,7 +208,7 @@ const HeroSection = () => {
       <div className="container mx-auto max-w-4xl px-4">
         <div className="mb-8">
           <Image
-            src="/profile.png"
+            src="/profile.jpg"
             alt="Muhammad Iqbal"
             width={128}
             height={128}
