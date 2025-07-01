@@ -1,6 +1,7 @@
 "use client"; // This directive is necessary for state and effects.
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image'; // Import the Next.js Image component
 import { Github, Linkedin, Mail, ShieldCheck, Code, Cpu, Server, BrainCircuit, ArrowRight, FileText, Instagram, Sun, Moon, ArrowUp, Home, User, Award, Briefcase } from 'lucide-react';
 
 // --- SVG Icons for services not in lucide-react ---
@@ -206,13 +207,13 @@ const HeroSection = () => {
     <section id="home" className="min-h-screen flex items-center justify-center text-center">
       <div className="container mx-auto max-w-4xl px-4">
         <div className="mb-8">
-          {/* Using a standard img tag to prevent build errors on Vercel */}
-          <img
-            src="/profile.jpg"
+          <Image
+            src="/profile.png"
             alt="Muhammad Iqbal"
-            width="128"
-            height="128"
+            width={128}
+            height={128}
             className="rounded-full mx-auto border-4 border-gray-200 dark:border-gray-700 shadow-lg"
+            priority
           />
         </div>
         <h1 className="text-4xl md:text-6xl font-extrabold bg-clip-text text-transparent bg-gradient-to-b from-gray-900 to-gray-600 dark:from-gray-50 dark:to-gray-400 pb-4">
@@ -298,11 +299,13 @@ const SkillsSection = () => {
 const ProjectCard = ({ title, description, tags, image, link }) => {
     return (
         <div className="bg-gray-100 dark:bg-gray-800/50 rounded-lg overflow-hidden border border-gray-200 dark:border-gray-700 group">
-            <div className="overflow-hidden h-48">
-                <img 
+            <div className="relative overflow-hidden h-48">
+                <Image 
                     src={image} 
                     alt={title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
                 />
             </div>
             <div className="p-6">
