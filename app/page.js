@@ -206,6 +206,7 @@ const HeroSection = () => {
     <section id="home" className="min-h-screen flex items-center justify-center text-center">
       <div className="container mx-auto max-w-4xl px-4">
         <div className="mb-8">
+          {/* Using a standard img tag to prevent build errors on Vercel */}
           <img
             src="/profile.jpg"
             alt="Muhammad Iqbal"
@@ -224,7 +225,7 @@ const HeroSection = () => {
           <a href="#projects" onClick={(e) => handleScroll(e, '#projects')} className="inline-flex items-center gap-2 bg-teal-500 text-white font-semibold py-3 px-6 rounded-lg hover:bg-teal-600 transition-all duration-300 shadow-lg shadow-teal-500/20">
             Explore Projects <ArrowRight size={20}/>
           </a>
-          <a href="#research" onClick={(e) => handleScroll(e, '#projects')} className="inline-flex items-center gap-2 bg-gray-700 text-white font-semibold py-3 px-6 rounded-lg hover:bg-gray-600 transition-all duration-300">
+          <a href="#projects" onClick={(e) => handleScroll(e, '#projects')} className="inline-flex items-center gap-2 bg-gray-700 text-white font-semibold py-3 px-6 rounded-lg hover:bg-gray-600 transition-all duration-300">
             View My Research <ShieldCheck size={20}/>
           </a>
         </div>
@@ -244,7 +245,7 @@ const AboutSection = () => {
             I am a Computer Engineering student at AMIKOM University Yogyakarta, driven by a deep-seated passion that lies at the intersection of software development and cybersecurity.
           </p>
           <p className="text-lg text-gray-700 dark:text-gray-300 mb-4">
-            I'm fascinated by the intricate logic of malware, the constant challenge of securing web applications, and the transformative power of AI and automation in solving complex security problems. I thrive on learning new technologies—be it a new programming language or the latest techniques in web and application exploitation.
+            I&apos;m fascinated by the intricate logic of malware, the constant challenge of securing web applications, and the transformative power of AI and automation in solving complex security problems. I thrive on learning new technologies—be it a new programming language or the latest techniques in web and application exploitation.
           </p>
           <p className="text-lg text-gray-700 dark:text-gray-300">
             I am eager to apply my skills in a challenging environment where I can contribute to building and securing innovative technologies, turning theoretical knowledge into practical, robust solutions.
@@ -348,7 +349,7 @@ const ProjectsSection = () => {
                 <div className="text-center mb-12">
                     <span className="inline-block bg-gray-200 dark:bg-gray-700 text-sm font-medium px-4 py-1 rounded-full mb-4">My Projects</span>
                     <h2 className="text-4xl font-bold">Check out my latest work</h2>
-                    <p className="text-lg text-gray-600 dark:text-gray-400 mt-2">Here are a few of my favorite projects I've worked on.</p>
+                    <p className="text-lg text-gray-600 dark:text-gray-400 mt-2">Here are a few of my favorite projects I&apos;ve worked on.</p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {projects.map((project) => (
@@ -410,7 +411,7 @@ const ContactSection = () => {
     <section id="contact" className="py-20 md:py-32">
       <div className="container mx-auto max-w-2xl px-4 text-center">
         <h2 className="text-3xl font-bold mb-4">Get In Touch</h2>
-        <p className="text-gray-600 dark:text-gray-400 mb-8">I'm currently open to new opportunities and collaborations. Feel free to reach out!</p>
+        <p className="text-gray-600 dark:text-gray-400 mb-8">I&apos;m currently open to new opportunities and collaborations. Feel free to reach out!</p>
         <a href="mailto:iqbal.mulachela.work@gmail.com" className="inline-flex items-center gap-3 bg-teal-500 text-white font-semibold py-3 px-8 rounded-lg hover:bg-teal-600 transition-all duration-300 text-lg">
           <Mail size={22} /> Say Hello
         </a>
