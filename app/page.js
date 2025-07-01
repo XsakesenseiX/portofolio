@@ -1,7 +1,7 @@
 "use client"; // This directive is necessary for state and effects.
 
 import { useState, useEffect } from 'react';
-// import Image from 'next/image'; // Removed to fix build error in some environments
+import Image from 'next/image'; // Import the Next.js Image component
 import { Github, Linkedin, Mail, ShieldCheck, Code, Cpu, Server, BrainCircuit, ArrowRight, FileText, Instagram, Sun, Moon, ArrowUp, Home, User, Award, Briefcase } from 'lucide-react';
 
 // --- SVG Icons for services not in lucide-react ---
@@ -44,7 +44,7 @@ const ThemeToggle = () => {
     return (
         <button
             onClick={toggleTheme}
-            className="relative group flex items-center justify-center h-12 w-12 rounded-full text-gray-400 hover:text-white hover:bg-gray-700/50 focus:bg-gray-700/80 transition-all duration-300"
+            className="relative group flex items-center justify-center h-10 w-10 md:h-12 md:w-12 rounded-full text-gray-400 hover:text-white hover:bg-gray-700/50 focus:bg-gray-700/80 transition-all duration-300"
             aria-label="Toggle theme"
         >
             {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
@@ -120,14 +120,14 @@ const DockNavbar = () => {
     ];
 
     return (
-        <div className="fixed bottom-5 left-1/2 -translate-x-1/2 z-50">
-            <div className="flex items-center justify-center gap-2 bg-gray-900/80 dark:bg-black/50 backdrop-blur-md p-3 rounded-full border border-gray-700/50 shadow-lg">
+        <div className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50">
+            <div className="flex items-center justify-center gap-1 md:gap-2 bg-gray-900/80 dark:bg-black/50 backdrop-blur-md p-2 md:p-3 rounded-full border border-gray-700/50 shadow-lg">
                 {navItems.map((item) => (
                     <a
                         key={item.href}
                         href={item.href}
                         onClick={(e) => handleScroll(e, item.href)}
-                        className="relative group flex items-center justify-center h-12 w-12 rounded-full text-gray-400 hover:text-white hover:bg-gray-700/50 focus:bg-gray-700/80 transition-all duration-300"
+                        className="relative group flex items-center justify-center h-10 w-10 md:h-12 md:w-12 rounded-full text-gray-400 hover:text-white hover:bg-gray-700/50 focus:bg-gray-700/80 transition-all duration-300"
                     >
                         {item.icon}
                         <span className="absolute -top-10 left-1/2 -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
@@ -136,7 +136,7 @@ const DockNavbar = () => {
                     </a>
                 ))}
                 
-                <div className="h-8 w-px bg-gray-600 mx-2"></div>
+                <div className="h-6 md:h-8 w-px bg-gray-600 mx-1 md:mx-2"></div>
 
                 {socialItems.map((item) => (
                      <a
@@ -144,7 +144,7 @@ const DockNavbar = () => {
                         href={item.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="relative group flex items-center justify-center h-12 w-12 rounded-full text-gray-400 hover:text-white hover:bg-gray-700/50 focus:bg-gray-700/80 transition-all duration-300"
+                        className="relative group flex items-center justify-center h-10 w-10 md:h-12 md:w-12 rounded-full text-gray-400 hover:text-white hover:bg-gray-700/50 focus:bg-gray-700/80 transition-all duration-300"
                     >
                         {item.icon}
                         <span className="absolute -top-10 left-1/2 -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
@@ -207,16 +207,17 @@ const HeroSection = () => {
     <section id="home" className="min-h-screen flex items-center justify-center text-center">
       <div className="container mx-auto max-w-4xl px-4">
         <div className="mb-8">
-          <img
-            src="/profile.jpg"
+          <Image
+            src="/profile.png"
             alt="Muhammad Iqbal"
-            width="128"
-            height="128"
+            width={128}
+            height={128}
             className="rounded-full mx-auto border-4 border-gray-200 dark:border-gray-700 shadow-lg"
+            priority
           />
         </div>
         <h1 className="text-4xl md:text-6xl font-extrabold bg-clip-text text-transparent bg-gradient-to-b from-gray-900 to-gray-600 dark:from-gray-50 dark:to-gray-400 pb-4">
-          Cybersecurity Engineer & Programmer
+          Cybersecurity Engineer & Python Developer
         </h1>
         <p className="mt-4 text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
           Building secure systems and analyzing digital threats. Specializing in threat detection, automation, and secure backend development.
@@ -239,7 +240,7 @@ const AboutSection = () => {
   return (
     <section id="about" className="py-20 md:py-32">
       <div className="container mx-auto max-w-4xl px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">About Me</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">About Me</h2>
         <div className="bg-gray-100/50 dark:bg-gray-800/50 p-8 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700">
           <p className="text-lg text-gray-700 dark:text-gray-300 mb-4">
             I am a Computer Engineering student at AMIKOM University Yogyakarta, driven by a deep-seated passion that lies at the intersection of software development and cybersecurity.
@@ -285,7 +286,7 @@ const SkillsSection = () => {
   return (
     <section id="skills" className="py-20 md:py-32 bg-gray-50 dark:bg-gray-900/50">
       <div className="container mx-auto max-w-5xl px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">Technical Skills</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Technical Skills</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {skillSets.map((set, index) => (<SkillCard key={index} {...set} />))}
         </div>
@@ -299,10 +300,12 @@ const ProjectCard = ({ title, description, tags, image, link }) => {
     return (
         <div className="bg-gray-100 dark:bg-gray-800/50 rounded-lg overflow-hidden border border-gray-200 dark:border-gray-700 group">
             <div className="relative overflow-hidden h-48">
-                <img 
+                <Image 
                     src={image} 
                     alt={title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
                 />
             </div>
             <div className="p-6">
@@ -348,7 +351,7 @@ const ProjectsSection = () => {
             <div className="container mx-auto max-w-5xl px-4">
                 <div className="text-center mb-12">
                     <span className="inline-block bg-gray-200 dark:bg-gray-700 text-sm font-medium px-4 py-1 rounded-full mb-4">My Projects</span>
-                    <h2 className="text-4xl font-bold">Check out my latest work</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold">Check out my latest work</h2>
                     <p className="text-lg text-gray-600 dark:text-gray-400 mt-2">Here are a few of my favorite projects I&apos;ve worked on.</p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -371,7 +374,7 @@ const CertificationsSection = () => {
   return (
     <section id="certifications" className="py-20 md:py-32 bg-gray-50 dark:bg-gray-900/50">
       <div className="container mx-auto max-w-4xl px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">Licenses & Certifications</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Licenses & Certifications</h2>
         <div className="space-y-6">
           {certifications.map((cert, index) => (
             <a key={index} href={cert.link} target="_blank" rel="noopener noreferrer" className="block bg-white dark:bg-gray-800/50 p-6 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-teal-500 hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-300 group">
@@ -396,7 +399,7 @@ const InterestsSection = () => {
   return (
     <section id="interests" className="py-20 md:py-32">
       <div className="container mx-auto max-w-4xl px-4 text-center">
-        <h2 className="text-3xl font-bold mb-8">Areas of Interest</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-8">Areas of Interest</h2>
         <div className="flex flex-wrap justify-center gap-4">
           {interests.map((interest, index) => (<div key={index} className="bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-full px-6 py-3"><p className="text-lg text-gray-700 dark:text-gray-300">{interest}</p></div>))}
         </div>
@@ -410,7 +413,7 @@ const ContactSection = () => {
   return (
     <section id="contact" className="py-20 md:py-32">
       <div className="container mx-auto max-w-2xl px-4 text-center">
-        <h2 className="text-3xl font-bold mb-4">Get In Touch</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
         <p className="text-gray-600 dark:text-gray-400 mb-8">I&apos;m currently open to new opportunities and collaborations. Feel free to reach out!</p>
         <a href="mailto:iqbal.mulachela.work@gmail.com" className="inline-flex items-center gap-3 bg-teal-500 text-white font-semibold py-3 px-8 rounded-lg hover:bg-teal-600 transition-all duration-300 text-lg">
           <Mail size={22} /> Say Hello
