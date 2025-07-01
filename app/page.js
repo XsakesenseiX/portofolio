@@ -1,7 +1,7 @@
 "use client"; // This directive is necessary for state and effects.
 
 import { useState, useEffect } from 'react';
-import { Github, Linkedin, Mail, ShieldCheck, Code, Cpu, Server, BrainCircuit, ArrowRight, FileText, Instagram, Sun, Moon, ArrowUp, Home, User, Award, Briefcase } from 'lucide-react';
+import Github, Linkedin, Mail, ShieldCheck, Code, Cpu, Server, BrainCircuit, ArrowRight, FileText, Instagram, Sun, Moon, ArrowUp, Home, User, Award, Briefcase from 'lucide-react';
 
 // --- SVG Icons for services not in lucide-react ---
 const WhatsAppIcon = (props) => (
