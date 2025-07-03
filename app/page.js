@@ -367,9 +367,13 @@ const ProjectsSection = () => {
 // --- Certifications Section ---
 const CertificationsSection = () => {
   const certifications = [
-    { title: "Certified Ethical Hacker (CEH)", issuer: "EC-Council", date: "2023", link: "/certificates/ceh-certificate.pdf" },
-    { title: "Advanced Python for Cybersecurity", issuer: "Coursera", date: "2023", link: "/certificates/python-cybersec-cert.pdf" },
-    { title: "CompTIA Security+", issuer: "CompTIA (via Credly)", date: "2022", link: "https://www.credly.com/your-badge-link" }
+    { title: "CCNA 1", issuer: "CISCO", date: "2024", link: "/public/certificate/ccna1.pdf" },
+    { title: "CCNA 2", issuer: "CISCO", date: "2024", link: "/public/certificate/ccna2.pdf" },
+    { title: "CCNA 3", issuer: "CISCO", date: "2024", link: "/public/certificate/ccna3.pdf" },
+    { title: "Fundamental Python", issuer: "Coding Studio", date: "2024", link: "/public/certificate/python_cs.pdf" },
+    { title: "Fundamental Command Linux", issuer: "Coding Studio", date: "2024", link: "/public/certificate/linux_cs.pdf" },
+    { title: "Fundamental Jaringan Komputer", issuer: "Coding Studio", date: "2024", link: "/public/certificate/jarkom_cs.pdf" },
+    { title: "Fundamental Algoritma", issuer: "Coding Studio", date: "2024", link: "/public/certificate/algoritma_cs.pdf" }
   ];
   return (
     <section id="certifications" className="py-20 md:py-32 bg-gray-50 dark:bg-gray-900/50">
