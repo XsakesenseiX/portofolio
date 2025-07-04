@@ -163,7 +163,7 @@ const DockNavbar = () => {
 
 // --- Main App Component ---
 export default function App() {
-  const backgroundImageUrl = '/bg.jpg';
+  const backgroundImageUrl = '';
 
   return (
     <div className="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 font-sans relative transition-colors duration-300">
@@ -243,13 +243,13 @@ const AboutSection = () => {
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">About Me</h2>
         <div className="bg-gray-100/50 dark:bg-gray-800/50 p-8 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700">
           <p className="text-lg text-gray-700 dark:text-gray-300 mb-4">
-            I am a Computer Engineering student at AMIKOM University Yogyakarta, driven by a deep-seated passion that lies at the intersection of software development and cybersecurity.
+            My journey into the world of technology wasn't born from a desire to defend, but to create. I began as a programmer, captivated by the elegant logic and boundless potential of code. It was through the process of building applications and systems from scratch that I encountered a profound truth: to truly secure a creation, one must first master the art of its deconstruction. This realization marked my pivot into the field of cybersecurity and became the guiding principle for my entire approach. I believe the most resilient defenses are not built by just following a checklist, but by those who can truly understand an attacker's mindset—not as an abstract adversary, but as a creative problem-solver who exposes the flaws we overlook.
           </p>
           <p className="text-lg text-gray-700 dark:text-gray-300 mb-4">
-            I&apos;m fascinated by the intricate logic of malware, the constant challenge of securing web applications, and the transformative power of AI and automation in solving complex security problems. I thrive on learning new technologies—be it a new programming language or the latest techniques in web and application exploitation.
+            This core philosophy actively shapes my focus on several key domains. My fascination with malware analysis stems directly from this; I see each sample not just as a piece of malicious code, but as a complex puzzle and a story of intent. Deconstructing it reveals invaluable lessons in defense. I am similarly drawn to the burgeoning field of IoT security, which I view as the new frontier of vulnerability. It's a critical intersection where the digital and physical worlds collide, presenting unique and urgent challenges that demand a new way of thinking about security. Ultimately, ethical hacking and vulnerability research are where my passion finds its most direct expression—the active, hands-on process of questioning assumptions and testing boundaries to fortify systems against real-world attacks before they happen.
           </p>
           <p className="text-lg text-gray-700 dark:text-gray-300">
-            I am eager to apply my skills in a challenging environment where I can contribute to building and securing innovative technologies, turning theoretical knowledge into practical, robust solutions.
+            The common thread weaving through all these interests is my unwavering commitment to expanding my programming toolkit. For me, learning languages like Python for its rapid scripting capabilities, C/C++ for its low-level control, and newer languages like Go or Rust for their modern concurrency and memory safety, is not just about accumulating skills. It's about acquiring new lenses through which to view and solve problems. Each language provides a different level of abstraction and power, essential for everything from automating security tasks to performing deep binary analysis. I am driven by the relentless pace of technological evolution and am eager to apply this multidisciplinary passion to solve complex challenges and contribute to building a more secure digital future.
           </p>
         </div>
       </div>
@@ -368,12 +368,12 @@ const ProjectsSection = () => {
 const CertificationsSection = () => {
   const certifications = [
     { title: "CCNA 1", issuer: "CISCO", date: "2024", link: "/certificate/ccna1.pdf" },
-    { title: "CCNA 2", issuer: "CISCO", date: "2024", link: "https://drive.google.com/file/d/1_1QElaBHrBavn4Q4xHAUKALo5ZEcg9t7/view?usp=drive_link" },
-    { title: "CCNA 3", issuer: "CISCO", date: "2024", link: "https://drive.google.com/file/d/1ZyJOUNsT7hT_Wt6C02zcJ7YvZbhGljMV/view?usp=drive_link" },
-    { title: "Fundamental Python", issuer: "Coding Studio", date: "2023", link: "https://drive.google.com/file/d/1AqYA95j9sR0wvqPZvoLHOpEYnwfxYSYu/view?usp=drive_link" },
-    { title: "Fundamental Command Linux", issuer: "Coding Studio", date: "2023", link: "https://drive.google.com/file/d/1_bOp4mcupbdSOhaeyHAOle79u40ivowl/view?usp=drive_link" },
-    { title: "Fundamental Jaringan Komputer", issuer: "Coding Studio", date: "2023", link: "https://drive.google.com/file/d/1qXzJKVPgKPy7INp-9NLRYk98Mw1qqOvi/view?usp=drive_link" },
-    { title: "Fundamental Algoritma", issuer: "Coding Studio", date: "2023", link: "https://drive.google.com/file/d/1QJ54VCOYGX-GfVR9nKkYYz37CEpoXPmt/view?usp=drive_link" }
+    { title: "CCNA 2", issuer: "CISCO", date: "2024", link: "/certificate/ccna2.pdf" },
+    { title: "CCNA 3", issuer: "CISCO", date: "2024", link: "/certificate/ccna3.pdf" },
+    { title: "Fundamental Python", issuer: "Coding Studio", date: "2023", link: "/certificate/python_cs.pdf" },
+    { title: "Fundamental Command Linux", issuer: "Coding Studio", date: "2023", link: "/certificate/linux_cs.pdf" },
+    { title: "Fundamental Jaringan Komputer", issuer: "Coding Studio", date: "2023", link: "/certificate/jarkom_cs.pdf" },
+    { title: "Fundamental Algoritma", issuer: "Coding Studio", date: "2023", link: "/certificate/algoritma_cs.pdf" }
   ];
   return (
     <section id="certifications" className="py-20 md:py-32 bg-gray-50 dark:bg-gray-900/50">
@@ -399,7 +399,7 @@ const CertificationsSection = () => {
 
 // --- Interests Section ---
 const InterestsSection = () => {
-  const interests = ["Malware Analyst", "AI", "IoT", "Web Exploitation, Automation Program"];
+  const interests = ["Malware Analyst", "AI", "IoT", "Web Exploitation", "Automation Program"];
   return (
     <section id="interests" className="py-20 md:py-32">
       <div className="container mx-auto max-w-4xl px-4 text-center">

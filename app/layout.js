@@ -12,8 +12,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Muhammad Iqbal - Portfolio",
-  description: "Cybersecurity Engineer & Python Developer",
+  title: "Muhammad Iqbal - Cybersecurity",
+  description: "Cybersecurity Engineer & Programmer",
 };
 
 export default function RootLayout({ children }) {
