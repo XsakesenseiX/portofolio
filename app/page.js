@@ -367,13 +367,13 @@ const ProjectsSection = () => {
 // --- Certifications Section ---
 const CertificationsSection = () => {
   const certifications = [
-    { title: "CCNA 1", issuer: "CISCO", date: "2024", link: "/public/certificate/ccna1.pdf" },
-    { title: "CCNA 2", issuer: "CISCO", date: "2024", link: "/public/certificate/ccna2.pdf" },
-    { title: "CCNA 3", issuer: "CISCO", date: "2024", link: "/public/certificate/ccna3.pdf" },
-    { title: "Fundamental Python", issuer: "Coding Studio", date: "2024", link: "/public/certificate/python_cs.pdf" },
-    { title: "Fundamental Command Linux", issuer: "Coding Studio", date: "2024", link: "/public/certificate/linux_cs.pdf" },
-    { title: "Fundamental Jaringan Komputer", issuer: "Coding Studio", date: "2024", link: "/public/certificate/jarkom_cs.pdf" },
-    { title: "Fundamental Algoritma", issuer: "Coding Studio", date: "2024", link: "/public/certificate/algoritma_cs.pdf" }
+    { title: "CCNA 1", issuer: "CISCO", date: "2024", link: "https://drive.google.com/file/d/1_0_kArg5DlSTr3UOYehr99sbTYqOg9mw/view?usp=drive_link" },
+    { title: "CCNA 2", issuer: "CISCO", date: "2024", link: "https://drive.google.com/file/d/1_1QElaBHrBavn4Q4xHAUKALo5ZEcg9t7/view?usp=drive_link" },
+    { title: "CCNA 3", issuer: "CISCO", date: "2024", link: "https://drive.google.com/file/d/1ZyJOUNsT7hT_Wt6C02zcJ7YvZbhGljMV/view?usp=drive_link" },
+    { title: "Fundamental Python", issuer: "Coding Studio", date: "2024", link: "https://drive.google.com/file/d/1AqYA95j9sR0wvqPZvoLHOpEYnwfxYSYu/view?usp=drive_link" },
+    { title: "Fundamental Command Linux", issuer: "Coding Studio", date: "2024", link: "https://drive.google.com/file/d/1_bOp4mcupbdSOhaeyHAOle79u40ivowl/view?usp=drive_link" },
+    { title: "Fundamental Jaringan Komputer", issuer: "Coding Studio", date: "2024", link: "https://drive.google.com/file/d/1qXzJKVPgKPy7INp-9NLRYk98Mw1qqOvi/view?usp=drive_link" },
+    { title: "Fundamental Algoritma", issuer: "Coding Studio", date: "2024", link: "https://drive.google.com/file/d/1QJ54VCOYGX-GfVR9nKkYYz37CEpoXPmt/view?usp=drive_link" }
   ];
   return (
     <section id="certifications" className="py-20 md:py-32 bg-gray-50 dark:bg-gray-900/50">
