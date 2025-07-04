@@ -163,7 +163,7 @@ const DockNavbar = () => {
 
 // --- Main App Component ---
 export default function App() {
-  const backgroundImageUrl = 'https://images.unsplash.com/photo-1550745165-9bc0b252726a?q=80&w=2070&auto=format&fit=crop';
+  const backgroundImageUrl = '/bg.jpg';
 
   return (
     <div className="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 font-sans relative transition-colors duration-300">
@@ -278,9 +278,9 @@ const SkillCard = ({ icon, title, skills }) => (
 const SkillsSection = () => {
   const skillSets = [
     { icon: <ShieldCheck size={24} />, title: "Cybersecurity", skills: ["Malware Analysis", "Web Security & Vulnerability Assessment", "Intrusion Detection Systems (IDS)", "Network Security", "Firewall Configuration"] },
-    { icon: <Code size={24} />, title: "Programming & Backend", skills: ["Python", "JavaScript", "Flask Framework", "Backend Architecture", "REST APIs"] },
+    { icon: <Code size={24} />, title: "Programming & Backend", skills: ["Python", "JavaScript", "Flask Framework", "TypeScript"] },
     { icon: <Server size={24} />, title: "Infrastructure & Ops", skills: ["Linux & Windows Server", "Server Management", "Automation Scripting", "Git & Version Control"] },
-    { icon: <BrainCircuit size={24} />, title: "AI & Data", skills: ["AI/ML for Security", "Data Analysis (NSL-KDD)", "IoT Concepts", "Automation"] },
+    { icon: <BrainCircuit size={24} />, title: "AI & Data", skills: ["AI", "Data Analysis (NSL-KDD)", "IoT Concepts", "Automation"] },
   ];
 
   return (
@@ -332,17 +332,17 @@ const ProjectsSection = () => {
             id: 'research', 
             title: "Enrichment Prevention Label for IDS Dataset", 
             description: "A research project to programmatically add firewall-based prevention labels to the NSL-KDD dataset, dramatically reducing incident response time.",
-            tags: ["Python", "Pandas", "Scikit-learn", "Cybersecurity", "Data Analysis"], 
-            image: "/project-ids.png", // ADD YOUR IMAGE TO /public/project-ids.png
+            tags: ["Firewall", "Cybersecurity", "Data Analysis"], 
+            image: "/research.jpeg", // ADD YOUR IMAGE TO /public/project-ids.png
             link: "https://github.com/XsakesenseiX/ids-research-repo"
         },
         { 
             id: 'whatsapp-bot', 
             title: "Automated WhatsApp Community Hotline", 
-            description: "Developed a WhatsApp bot using Python and Flask to provide instant, automated responses for a community hotline, improving accessibility.",
-            tags: ["Python", "Flask", "WhatsApp API", "Webhooks"], 
-            image: "/project-bot.png", // ADD YOUR IMAGE TO /public/project-bot.png
-            link: "https://github.com/XsakesenseiX/whatsapp-bot-repo"
+            description: "Developed a WhatsApp bot using JavaScript and Typescript to provide instant, automated responses for a computer engineering hotline at AMIKOM University, improving accessibility.",
+            tags: ["JavaScript", "TypeScript", "WhatsApp API"], 
+            image: "/whatsapp.jpeg", // ADD YOUR IMAGE TO /public/project-bot.png
+            link: "https://github.com/XsakesenseiX/botwa_tekkom"
         }
     ];
 
@@ -367,13 +367,13 @@ const ProjectsSection = () => {
 // --- Certifications Section ---
 const CertificationsSection = () => {
   const certifications = [
-    { title: "CCNA 1", issuer: "CISCO", date: "2024", link: "https://drive.google.com/file/d/1_0_kArg5DlSTr3UOYehr99sbTYqOg9mw/view?usp=drive_link" },
+    { title: "CCNA 1", issuer: "CISCO", date: "2024", link: "/certificate/ccna1.pdf" },
     { title: "CCNA 2", issuer: "CISCO", date: "2024", link: "https://drive.google.com/file/d/1_1QElaBHrBavn4Q4xHAUKALo5ZEcg9t7/view?usp=drive_link" },
     { title: "CCNA 3", issuer: "CISCO", date: "2024", link: "https://drive.google.com/file/d/1ZyJOUNsT7hT_Wt6C02zcJ7YvZbhGljMV/view?usp=drive_link" },
-    { title: "Fundamental Python", issuer: "Coding Studio", date: "2024", link: "https://drive.google.com/file/d/1AqYA95j9sR0wvqPZvoLHOpEYnwfxYSYu/view?usp=drive_link" },
-    { title: "Fundamental Command Linux", issuer: "Coding Studio", date: "2024", link: "https://drive.google.com/file/d/1_bOp4mcupbdSOhaeyHAOle79u40ivowl/view?usp=drive_link" },
-    { title: "Fundamental Jaringan Komputer", issuer: "Coding Studio", date: "2024", link: "https://drive.google.com/file/d/1qXzJKVPgKPy7INp-9NLRYk98Mw1qqOvi/view?usp=drive_link" },
-    { title: "Fundamental Algoritma", issuer: "Coding Studio", date: "2024", link: "https://drive.google.com/file/d/1QJ54VCOYGX-GfVR9nKkYYz37CEpoXPmt/view?usp=drive_link" }
+    { title: "Fundamental Python", issuer: "Coding Studio", date: "2023", link: "https://drive.google.com/file/d/1AqYA95j9sR0wvqPZvoLHOpEYnwfxYSYu/view?usp=drive_link" },
+    { title: "Fundamental Command Linux", issuer: "Coding Studio", date: "2023", link: "https://drive.google.com/file/d/1_bOp4mcupbdSOhaeyHAOle79u40ivowl/view?usp=drive_link" },
+    { title: "Fundamental Jaringan Komputer", issuer: "Coding Studio", date: "2023", link: "https://drive.google.com/file/d/1qXzJKVPgKPy7INp-9NLRYk98Mw1qqOvi/view?usp=drive_link" },
+    { title: "Fundamental Algoritma", issuer: "Coding Studio", date: "2023", link: "https://drive.google.com/file/d/1QJ54VCOYGX-GfVR9nKkYYz37CEpoXPmt/view?usp=drive_link" }
   ];
   return (
     <section id="certifications" className="py-20 md:py-32 bg-gray-50 dark:bg-gray-900/50">
@@ -399,7 +399,7 @@ const CertificationsSection = () => {
 
 // --- Interests Section ---
 const InterestsSection = () => {
-  const interests = ["Malware Reverse Engineering", "AI-Driven Threat Hunting", "IoT Device Security", "Advanced Web Exploitation"];
+  const interests = ["Malware Analyst", "AI", "IoT", "Web Exploitation, Automation Program"];
   return (
     <section id="interests" className="py-20 md:py-32">
       <div className="container mx-auto max-w-4xl px-4 text-center">
